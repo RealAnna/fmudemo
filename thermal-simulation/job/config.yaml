@@ -7,9 +7,9 @@ actions:
       - name: "remote-simulation"
         image: "annadreal/passfmu:latest"
         args:
-          - $(TEMPERATURE)
-          - $(FLOW)
-          - $(PRESSURE)
+          - "10"
+          - "10"
+          - "10"
         env:
           - name: TEMPERATURE
             value: "$.data.labels.temperature"
