@@ -5,8 +5,7 @@ actions:
       - name: "sh.keptn.event.remote-simulation.triggered"
     tasks:
       - name: "remote-simulation"
-        image: "annadreal/passfmu:latest"
-        args: ["10","10","10"]
+        image: "annadreal/passfmu:amd64"
         env:
           - name: TEMPERATURE
             value: "$.data.labels.temperature"
