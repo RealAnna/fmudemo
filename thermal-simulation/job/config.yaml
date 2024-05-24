@@ -6,4 +6,17 @@ actions:
     tasks:
       - name: "remote-simulation"
         image: "annadreal/myfmu:latest"
-        args: ["10","10","10"]
+        args: ["$(TEMPERATURE)","$(FLOW)","$(PRESSURE)"]
+        env:
+        - name: TEMPERATURE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.labels['temperature']
+        - name: FLOW
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.labels['flow']
+        - name: PRESSURE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.labels['pressure']
