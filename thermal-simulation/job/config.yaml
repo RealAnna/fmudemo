@@ -5,5 +5,5 @@ actions:
       - name: "sh.keptn.event.remote-simulation.triggered"
     tasks:
       - name: "remote-simulation"
-        image: "annadreal/myfmu:latest"
+        image: "annadreal/simplefmu:latest"
         args: ["$(LABELS_TEMPERATURE)","10","10"]
