@@ -6,4 +6,4 @@ actions:
     tasks:
       - name: "remote-simulation"
         image: "annadreal/myfmu:latest"
-        args: ["10","10","10"]
+        args: ["$(LABELS_TEMPERATURE)","10","10"]
