@@ -7,8 +7,6 @@ actions:
       - name: "remote-simulation"
         image: "annadreal/passfmu:latest"
         args:
-          - "-c"
-          - "sh ./script.sh
           - $(TEMPERATURE)
           - $(FLOW)
           - $(PRESSURE)
