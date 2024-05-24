@@ -5,7 +5,7 @@ actions:
       - name: "sh.keptn.event.remote-simulation.triggered"
     tasks:
       - name: "remote-simulation"
-        image: "annadreal/simplefmu:latest"
+        image: "annadreal/passfmu:latest"
         args:
           - $(TEMPERATURE)
           - $(FLOW)
