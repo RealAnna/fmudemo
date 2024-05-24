@@ -6,10 +6,7 @@ actions:
     tasks:
       - name: "remote-simulation"
         image: "annadreal/passfmu:latest"
-        args:
-          - "10"
-          - "10"
-          - "10"
+        args: ["10","10","10"]
         env:
           - name: TEMPERATURE
             value: "$.data.labels.temperature"
