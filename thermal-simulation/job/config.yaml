@@ -6,6 +6,7 @@ actions:
     tasks:
       - name: "remote-simulation"
         image: "annadreal/passfmu:latest"
+        cmd: "/bin/sh"
         args:
           - $(TEMPERATURE)
           - $(FLOW)
