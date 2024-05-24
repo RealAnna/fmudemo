@@ -6,4 +6,17 @@ actions:
     tasks:
       - name: "remote-simulation"
         image: "annadreal/simplefmu:latest"
-        args: ["$LABELS_TEMPERATURE","10","10"]
+        args:
+          - $(TEMPERATURE)
+          - $(FLOW)
+          - $(PRESSURE)
+        env:
+          - name: TEMPERATURE
+            value: "$.data.labels.temperature"
+            valueFrom: event
+          - name: FLOW
+            value: "$.data.labels.flow"
+            valueFrom: event
+          - name: PRESSURE
+            value: "$.data.labels.pressure"
+            valueFrom: event
