@@ -1,6 +1,6 @@
 apiVersion: v2
 actions:
-  - name: "Be polite and say hello!"
+  - name: "Running thermal simulation"
     events:
       - name: "sh.keptn.event.remote-simulation.triggered"
     tasks:
